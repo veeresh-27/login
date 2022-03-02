@@ -1,0 +1,14 @@
+.layout{
+    width: 100%;
+    top: 10vh;
+    position: relative;
+    padding: 50px 100px;
+}
+
+.pricing {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}

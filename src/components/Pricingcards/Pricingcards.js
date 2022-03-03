@@ -1,12 +1,12 @@
 import React from 'react'
 import './Pricingcards.css'
-import { useState } from 'react'
-import info from '../info.json'
+// import { useState } from 'react'
+// import info from '../info.json'
 
 const Pricingcards = ({ title, preview, brand, price, id,onClick }) => {
     
     return (<div className = 'card'
-        id = { id } onClick={()=>onClick({ title, preview, brand, price, id})}>
+        id = { id } onClick={onClick} >
         <div className = 'card-image' >
         <img src = { preview } alt = "" />
         </div> 

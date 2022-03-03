@@ -4,12 +4,14 @@
     background-color: var(--c-light);
     display: flex;
     padding: 20px 120px;
+    
     align-items: center;
-    position: fixed;
     top: 0;
     left: 0;
     z-index: 99;
-    transition: all 0.2s ease-in-out;
+    position: fixed;
+    flex-direction: row;
+    user-select: none;
 }
 
 .navbar {
@@ -20,10 +22,13 @@
     padding: 20px 120px;
     align-items: center;
     position: fixed;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    box-shadow: rgba(202, 200, 200, 0.842) 0px 10px 15px -3px, rgba(199, 199, 199, 0.884) 0px 4px 6px -2px;
     top: 0;
     left: 0;
     z-index: 99;
+    flex-direction: row;
+    user-select: none;
+    
 }
 
 .burger {
@@ -31,7 +36,12 @@
 }
 
 
-
+.navbarTitle{
+    font-size: 20px;
+    font-weight: 500;
+    color: #009688;
+    cursor: pointer;
+}
 
 .search{
     display: flex;
@@ -85,4 +95,7 @@
     color: var(--c-warning);
 }
 
+.profileIcon{
+    cursor: pointer;
+}
 

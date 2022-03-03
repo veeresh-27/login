@@ -2,11 +2,12 @@ import React from 'react'
 import './Navbar.css'
 import { useState,useEffect } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
+import { Avatar } from '@mui/material';
 
-function Navbar() {
+function Navbar({onClickNavTitile}) {
   const [show, setShow] = useState(false);
   const navbarScroll = () => {
-    if (window.scrollY > 100)
+    if (window.scrollY > 100 )
       setShow(true) // show navbar Effect when scroll down
     else 
       setShow(false);
@@ -20,7 +21,9 @@ function Navbar() {
 
   return (
     <div className={show?"navbar":"unScrolledNavbar"}>
-      StopNBuy
+      <div className="navbarTitle" onClick={onClickNavTitile}>
+        <h3>Shmart</h3>
+      </div>
       <div className="search">
         <input type="text" placeholder="Search" />
         <SearchIcon className='icon'/>
@@ -31,12 +34,13 @@ function Navbar() {
             Accessories
           </li>
           <li className='nav-link'>
-            Women
+            Clothing
           </li>
-          <li className='nav-link'>
-            Men
-          </li>
+          
         </ul>
+      </div>
+      <div className="profileIcon">
+          <Avatar />
       </div>
     </div>
   )

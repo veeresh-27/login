@@ -1,15 +1,13 @@
 import React from 'react'
 import './Pricing.css'
-import { useState } from 'react'
+// import { useState } from 'react'
 import info from '../info.json'
 import Pricingcards from '../Pricingcards/Pricingcards'
-import Navbar from '../Navbar/Navbar'
+// import Navbar from '../Navbar/Navbar'
 
-function Pricing() {
-  const [store, setStore] = useState({});
-  const clicked = (newData) => {
-    setStore(newData);
-  }
+function Pricing({onClickPriceCard}) {
+  
+  
  
   return <div>
     
@@ -24,7 +22,7 @@ function Pricing() {
             info.map(({ name, preview, brand, price, id, isAccessory }, index) => (
 
               !isAccessory ? < Pricingcards key={index} title={name} preview={preview} brand={brand} price={price}
-                id={id} onClick={clicked} /> : <></>
+                id={id} onClick={()=>onClickPriceCard({index})} /> : <></>
 
             ))
           }
@@ -41,7 +39,7 @@ function Pricing() {
             info.map(({ name, preview, brand, price, id, isAccessory }, index) => (
 
               isAccessory ? < Pricingcards key={index} title={name} preview={preview} brand={brand} price={price}
-                id={id} onClick={clicked} /> : <></>
+                id={id} onClick={()=>onClickPriceCard({index})} /> : <></>
 
             ))
 
